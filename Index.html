@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSI Church Mangarai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- AOS CSS (Animate on Scroll) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./Styles/styles.css">
+</head>
+
+<body>
+  <!-- 🔄 Preloader -->
+  <div id="loader">
+    <div class="circle-loader"></div>
+    <div class="loading-text">Loading...</div>
+    <div class="glow-line"></div>
+  </div>
+
+  <!-- 🧾 Main Content Wrapper -->
+  <div id="main-content" style="display: none;">
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark px-3 fixed-top">
+      <div class="container-fluid">
+
+        <!-- Brand: Logos + Title -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./Source/CHURCHLOGO.jpg" alt="Church Logo">
+          <span class="fw-bold text-white ms-2">CSI PASTORATE CHURCH</span>
+          <img src="./Source/CSILOGO.png" alt="CSI Logo">
+        </a>
+
+        <!-- Toggle Button for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Items -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">History</a></li>
+                <li><a class="dropdown-item" href="#">Mission & Vision</a></li>
+                <li><a class="dropdown-item" href="#">Our Beliefs</a></li>
+              </ul>
+            </li>
+
+            <!-- People Who Served Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">People Who Served</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Past Pastors</a></li>
+                <li><a class="dropdown-item" href="#">Church Elders</a></li>
+                <li><a class="dropdown-item" href="#">Key Contributors</a></li>
+              </ul>
+            </li>
+
+            <!-- Committee Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Our Present
+                Committee</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Pastor</a></li>
+                <li><a class="dropdown-item" href="#">Secretary</a></li>
+                <li><a class="dropdown-item" href="#">Treasurer</a></li>
+                <li><a class="dropdown-item" href="#">Committee Members</a></li>
+              </ul>
+            </li>
+
+            <!-- Reach Us Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Reach Us</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Contact Info</a></li>
+                <li><a class="dropdown-item" href="#">Location</a></li>
+                <li><a class="dropdown-item" href="#">Service Timings</a></li>
+              </ul>
+            </li>
+
+            <!-- Social Media Icons -->
+            <li class="nav-item social-icons"><a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="nav-item social-icons"><a class="nav-link" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="nav-item social-icons"><a class="nav-link" href="#"><i class="fab fa-youtube"></i></a></li>
+            <li class="nav-item social-icons"><a class="nav-link" href="mailto:example@example.com"><i
+                  class="fas fa-envelope"></i></a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Video Background Section -->
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="./Source/CSI Church Mangarai.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div>
+      <div class="video-content">
+        <h1 class="display-4 fw-bold">WELCOME TO CSI PASTORATE CHURCH MANGARAI</h1>
+        <div class="mt-4">
+          <a href="#" class="btn btn-danger btn-custom">WATCH ONLINE</a>
+          <a href="#" class="btn btn-primary btn-custom">PRAYER REQUEST</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔔 Notice Button -->
+    <div id="notice-button" onclick="toggleNotice()">
+      <i class="fas fa-bell"></i>
+    </div>
+
+    <!-- 📋 Notice Sidebar -->
+    <div id="notice-sidebar">
+      <div class="notice-header">
+        <h5>📢 Announcements</h5>
+        <button onclick="toggleNotice()" class="close-btn">&times;</button>
+      </div>
+      <div class="notice-content">
+        <div class="notice-list">
+          <h6>Latest Notices</h6>
+          <ul id="notice-list">
+            <li>Sunday Worship @ 8:30 AM</li>
+            <li>Friday Night Prayer @ 6:30 PM</li>
+            <li>Youth Camp Registration Open</li>
+            <li>Choir Practice at 7:00 AM</li>
+            <li>Women's Fellowship this Saturday</li>
+            <li>Special Fasting Prayer - Aug 15</li>
+            <li>Harvest Festival Planning Meeting</li>
+            <li>New Members Welcome Service</li>
+            <li>Sunday School Resumes This Week</li>
+            <li>Committee Meeting Next Sunday</li>
+          </ul>
+        </div>
+        <div class="event-list">
+          <h6 class="text-warning">Upcoming Events</h6>
+          <ul id="event-list">
+            <li class="highlight">Aug 15 – Independence Day Prayer</li>
+            <li class="highlight">Aug 18 – Youth Sunday</li>
+            <li class="highlight">Aug 25 – Healing Service</li>
+            <li class="highlight">Sep 01 – Communion Service</li>
+            <li class="highlight">Sep 07 – Choir Auditions</li>
+            <li class="highlight">Sep 10 – Outreach Program</li>
+            <li class="highlight">Sep 15 – Women's Retreat</li>
+            <li class="highlight">Sep 20 – Bible Quiz Finals</li>
+            <li class="highlight">Sep 25 – Family Counseling Day</li>
+            <li class="highlight">Sep 30 – Youth Talent Show</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Church History Section -->
+    <section class="py-5 bg-light" id="church-history" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Text Section -->
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-4 text-center">Church History</h2>
+            <p class="text-muted mb-4 text-center">
+              The History of CSI PASTORATE CHURCH MANGARAI (ESTD.1867) is located in between Karungal to Puthukadai
+              Road. It is one of the biggest pastorate churches in the Karungal District church.
+              This channel is used for all the activities of CSI Pastorate Church Mangarai. May God bless you all...
+            </p>
+            <a href="#" class="btn btn-danger rounded-pill px-4 py-2 fw-bold">KNOW MORE <i
+                class="fas fa-arrow-right ms-2"></i></a>
+          </div>
+
+          <!-- Images Section -->
+          <div class="col-lg-6 text-center mt-4 mt-lg-0 position-relative">
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+              <img src="./Source/History1.jpg" alt="Historical Figure" class="history-img shadow" style="width: 450px;"
+                data-aos="fade-up" data-aos-delay="100">
+              <img src="./Source/History2.jpg" alt="Old Church" class="history-img shadow" style="width: 240px;"
+                data-aos="fade-up" data-aos-delay="200">
+              <img src="./Source/history3.jpg" alt="Modern Church" class="history-img shadow" style="width: 200px;"
+                data-aos="fade-up" data-aos-delay="300">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tamil Bible Verse Section -->
+    <section class="tamil-bible-verse" data-aos="fade-up">
+      <img src="./Source/bibleverse.png" alt="Bible">
+      <h2>இன்றைய வேதாகம வசனம்</h2>
+      <p id="verse-text">Loading...</p>
+      <p class="verse-ref" id="verse-ref"></p>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Bible Verse Script -->
+    <script>
+      const tamilVerses = [
+        { text: "கர்த்தர் என் மேய்ப்பனாக இருக்கிறார்; எனக்கு குறைவில்லை.", ref: "சங்கீதம் 23:1" },
+        { text: "கர்த்தரை நம்புகிறவன் வெட்கப்படமாட்டான்.", ref: "ரோமர் 10:11" },
+        { text: "உன் வழிகளில் அவரைப் பாராட்டும், அவர் உன் பாதைகளை நேராக மாற்றுவார்.", ref: "நீதிமொழிகள் 3:6" },
+        { text: "அவன் கொடுக்கிற சமாதானம் உலகம் கொடுக்காத சமாதானம்.", ref: "யோவான் 14:27" },
+        { text: "கர்த்தர் என் வெளிச்சமும் என் இரட்சிப்பும்.", ref: "சங்கீதம் 27:1" },
+        { text: "நாம் விசுவாசத்தில் நடக்கவேண்டும், பார்வையில் அல்ல.", ref: "2 கொரிந்தியர் 5:7" },
+        { text: "அவன் நமக்காக உயிரிழந்தான்; நாமும் நம்முடைய சகோதரருக்காக உயிர் கொடுக்கவேண்டும்.", ref: "1 யோவான் 3:16" },
+        { text: "பயப்படாதே; நான் உன்னோடிருக்கிறேன்.", ref: "எசாயா 41:10" },
+        { text: "நீதிமான் ஏழு முறை விழுந்தாலும் எழுந்து வருவான்.", ref: "நீதிமொழிகள் 24:16" },
+        { text: "உங்களை வலிமைப்படுத்துகிறவரால் எல்லாவற்றையும் செய்யக்கூடுகிறேன்.", ref: "பிலிப்பியர் 4:13" },
+        { text: "நன்மையைச் செய்யும் போது தளராதிருங்கள்.", ref: "கலாத்தியர் 6:9" },
+        { text: "அவனுடைய கிருபை நாள்தோறும் புதுப்பிக்கப்படுகிறது.", ref: "நிந்தனைகள் 3:23" },
+        { text: "நம் தேவன் எப்போதும் விசுவாசமுள்ளவர்.", ref: "1 கொரிந்தியர் 1:9" },
+        { text: "இருளில் நடக்கும் மக்களுக்கு வெளிச்சம் தோன்றும்.", ref: "எசாயா 9:2" },
+        { text: "கர்த்தர் உனக்காக போராடுவார்; நீ அமைதியாக இரு.", ref: "யாத்திராகமம் 14:14" },
+        { text: "அவனில் விசுவாசமுள்ளவர்கள் நித்திய ஜீவனை உடையவர்களாவர்.", ref: "யோவான் 3:16" },
+        { text: "சத்தியம் உங்களை விடுவிக்குமே.", ref: "யோவான் 8:32" },
+        { text: "கர்த்தரின் பாதையில் சாந்தியும் உண்டு.", ref: "எசாயா 26:3" },
+        { text: "கர்த்தருக்குள் சந்தோஷமாயிரு, அவன் உன் மனத்தில் உள்ள விருப்பங்களை உனக்குக் கொடுப்பான்.", ref: "சங்கீதம் 37:4" },
+        { text: "துணிவாக இருங்கள்; நான் உலகத்தை ஜெயித்துவிட்டேன்.", ref: "யோவான் 16:33" }
+      ];
+
+      const today = new Date();
+      const index = today.getDate() % tamilVerses.length;
+      const verse = tamilVerses[index];
+
+      document.getElementById('verse-text').textContent = verse.text;
+      document.getElementById('verse-ref').textContent = verse.ref;
+    </script>
+
+
+    <!-- Office Bearers Section -->
+    <section id="office-bearers" class="position-relative text-white overflow-hidden">
+
+      <script>
+        const useVideoBackground = true;
+        window.addEventListener("DOMContentLoaded", () => {
+          const bgContainer = document.getElementById("background-container");
+          if (useVideoBackground) {
+            bgContainer.innerHTML = `
+          <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover z-n1">
+            <source src="./Source/bearers background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        `;
+          } else {
+            bgContainer.innerHTML = `
+          <div class="position-absolute top-0 start-0 w-100 h-100 z-n1" 
+               style="background: linear-gradient(to right, #111, #222, #111); background-size: cover;"></div>
+        `;
+          }
+        });
+      </script>
+
+      <div id="background-container"></div>
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 0;">
+      </div>
+
+      <div class="container py-5 position-relative" style="z-index: 1;">
+        <h2 class="fw-bold text-center mb-4" data-aos="fade-up">Office Bearers</h2>
+        <div class="mx-auto mb-5 col-md-6" style="width: 100px; height: 4px; background: #e91e63; border-radius: 2px;">
+        </div>
+
+        <div class="row g-4">
+          <!-- Card Template -->
+          <div class="col-12 col-sm-6 col-lg-3 col-md-6" data-aos="fade-up">
+            <div class="card h-90 shadow border-0 hover-effect">
+              <img src="./Source/chairman.jpg" class="card-img-top" alt="Chairman">
+              <div class="card-body text-center bg-light">
+                <h6 class="text-danger mb-1">Rev. Herold Anith</h6>
+                <p class="text-muted mb-0">Chairman</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-900 shadow border-0 hover-effect">
+              <img src="person2.jpg" class="card-img-top" alt="Secretary">
+              <div class="card-body text-center bg-light">
+                <h6 class="text-danger mb-1">G. PACKIA SELVAN B.Sc., B.Ed.</h6>
+                <p class="text-muted mb-0">HON. SECRETARY</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-800 shadow border-0 hover-effect">
+              <img src="./Source/treasurerimage.jpg" class="card-img-top" alt="Treasurer">
+              <div class="card-body text-center bg-light">
+                <h6 class="text-danger mb-1">Mr.Selvin Yesudhas</h6>
+                <p class="text-muted mb-0">TREASURER</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-10 shadow border-0 hover-effect">
+              <img src="./Source/accountantimage.jpg" class="card-img-top" alt="Member">
+              <div class="card-body text-center bg-light">
+                <h6 class="text-danger mb-1">Mr.Jeya Paul</h6>
+                <p class="text-muted mb-0">ACCOUNTANT</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="ministries" id="ministries">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-5">Ministries</h2>
+
+        <div class="row g-4">
+          <!-- Row 1 -->
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="card shadow-sm h-100">
+              <img src="./Source/homegathering.jpg" class="card-img-top" alt="Home Gathering">
+              <div class="card-body">
+                <h5 class="card-title">Home Gathering</h5>
+                <p class="card-text">Encouraging People to grow in faith, leadership, and responsibility.</p>
+                <a href="#" class="btn btn-danger">Know More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="card shadow-sm h-100">
+              <img src="ministry2.jpg" class="card-img-top" alt="Women Ministry">
+              <div class="card-body">
+                <h5 class="card-title">Women's Ministry</h5>
+                <p class="card-text">Empowering women to walk boldly in faith and service.</p>
+                <a href="#" class="btn btn-danger">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="card shadow-sm h-100">
+              <img src="ministry3.jpg" class="card-img-top" alt="Youth Ministry">
+              <div class="card-body">
+                <h5 class="card-title">Youth Ministry</h5>
+                <p class="card-text">Inspiring youth with Christ-centered values and community impact.</p>
+                <a href="#" class="btn btn-danger">Know More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="card shadow-sm h-100">
+              <img src="ministry4.jpg" class="card-img-top" alt="Prayer Ministry">
+              <div class="card-body">
+                <h5 class="card-title">365 Days Prayer</h5>
+                <p class="card-text">Daily intercessory prayer for church and global needs.</p>
+                <a href="#" class="btn btn-danger">Know More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="card shadow-sm h-100">
+              <img src="ministry5.jpg" class="card-img-top" alt="Sunday School">
+              <div class="card-body">
+                <h5 class="card-title">Sunday School</h5>
+                <p class="card-text">Teaching biblical truths to children in a fun, creative way.</p>
+                <a href="#" class="btn btn-danger">Know More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="card shadow-sm h-100">
+              <img src="ministry6.jpg" class="card-img-top" alt="Service Order">
+              <div class="card-body">
+                <h5 class="card-title">Order of Service</h5>
+                <p class="card-text">Structured worship with Scripture, praise, and message.</p>
+                <a href="#" class="btn btn-danger">Know More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 🔵 Timings Carousel Section -->
+    <div class="timing-container container py-5" data-aos="fade-down">
+
+      <h2 class="text-center mb-4">Church Service Timings</h2>
+      <p class="text-center mb-4">We’re glad you’re here! Join us for worship and fellowship!</p>
+
+      <div id="timingCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators timing-carousel-indicators">
+          <button type="button" data-bs-target="#timingCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#timingCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#timingCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner timing-carousel-inner">
+
+          <!-- Slide 1: Worship Timings -->
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-md-4" data-aos="fade-right">
+                <div class="timing-card text-center p-3">
+                  <h5 class="card-title">Wednesday Worship</h5>
+                  <p class="card-text">6:30 PM - 8:00 PM</p>
+                </div>
+              </div>
+              <div class="col-md-4" data-aos="fade-down">
+                <div class="timing-card text-center p-3">
+                  <h5 class="card-title">Friday Worship</h5>
+                  <p class="card-text">6:30 PM - 8:00 PM</p>
+                </div>
+              </div>
+              <div class="col-md-4" data-aos="fade-left">
+                <div class="timing-card text-center p-3">
+                  <h5 class="card-title">Sunday Worship</h5>
+                  <p class="card-text">8:30 AM - 11:00 AM</p>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <a href="#" class="timing-btn">More Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Choir Practice -->
+          <div class="carousel-item">
+            <div class="text-center">
+              <div class="timing-card mx-auto p-4" style="max-width: 600px;" data-aos="fade-down">
+                <h5 class="card-title">Choir Practice Timings</h5>
+                <p class="card-text">Monday to Saturday: 7:00 a.m.</p>
+                <p class="card-text">You can visit our choir team from 6:30 a.m. to 6:00 p.m.</p>
+                <a href="#" class="timing-btn mt-3">Click Here</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Sunday Specials -->
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-md-3" data-aos="fade-right">
+                <div class="timing-card text-center p-3">
+                  <h5 class="card-title">Sunday School</h5>
+                  <p class="card-text">8:00 AM - 8:45 AM</p>
+                </div>
+              </div>
+              <div class="col-md-3" data-aos="fade-up">
+                <div class="timing-card text-center p-3">
+                  <h5 class="card-title">Endeavour</h5>
+                  <p class="card-text">5:00 PM - 6:00 PM</p>
+                </div>
+              </div>
+              <div class="col-md-3" data-aos="fade-up">
+                <div class="timing-card text-center p-3">
+                  <h5 class="card-title">Children Ministry</h5>
+                  <p class="card-text">9:00 AM - 10:00 AM</p>
+                </div>
+              </div>
+              <div class="col-md-3" data-aos="fade-left">
+                <div class="timing-card text-center p-3">
+                  <h5 class="card-title">Special Prayer</h5>
+                  <p class="card-text">6:00 PM - 7:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev timing-carousel-control-prev" type="button"
+          data-bs-target="#timingCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon timing-carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next timing-carousel-control-next" type="button"
+          data-bs-target="#timingCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon timing-carousel-control-next-icon"></span>
+        </button>
+
+      </div>
+    </div>
+
+    <section class="testimonial-section text-center" id="testimonial-section">
+      <div class="container">
+        <h2 class="testimonial-section-heading">வாக்குமூலங்கள்</h2>
+
+        <div id="testimonialCarousel" class="carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators testimonial-carousel-indicators">
+            <!-- 15 Indicators -->
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="5"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="6"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="7"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="8"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="9"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="10"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="11"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="12"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="13"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="14"></button>
+          </div>
+
+          <div class="carousel-inner testimonial-carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“இந்த சபையின் வழியாக என் வாழ்க்கை மாற்றமடைந்தது!”</p>
+                <strong>– சாட்சி 1</strong>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“இங்கே உள்ள ஆராதனைகள் என் உள்ளத்தைக் கவர்ந்தது.”</p>
+                <strong>– சாட்சி 2</strong>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“இந்த சபை என் குடும்பத்திற்கு ஆசீர்வாதமாக இருந்தது.”</p>
+                <strong>– சாட்சி 3</strong>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“நான் இங்கே உள்ளவர்களுடன் ஆன்மீக உறவு கொண்டேன்.”</p>
+                <strong>– சாட்சி 4</strong>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“அருள்மிகு தரிசனம் என் உள்ளத்தை அமைதி செய்தது.”</p>
+                <strong>– சாட்சி 5</strong>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“பார்வை நினைவலைகள் கொண்டது இந்த உதவி.”</p>
+                <strong>– சாட்சி 6</strong>
+              </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“இங்கே நான் உண்மையான சாந்தியை கண்டேன்.”</p>
+                <strong>– சாட்சி 7</strong>
+              </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“சத்தியம், அன்பு இங்கே வாழ்கின்றன.”</p>
+                <strong>– சாட்சி 8</strong>
+              </div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“மக்கள் என் நண்பர்களாக மாறினர்.”</p>
+                <strong>– சாட்சி 9</strong>
+              </div>
+            </div>
+
+            <!-- Slide 10 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“என் மனம் இங்கு வாசிக்கின்றது.”</p>
+                <strong>– சாட்சி 10</strong>
+              </div>
+            </div>
+
+            <!-- Slide 11 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“சபையின் சேவைகள் மகிழ்ச்சிகரமானவை.”</p>
+                <strong>– சாட்சி 11</strong>
+              </div>
+            </div>
+
+            <!-- Slide 12 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“ஆசிஸின் ஆளுமையை அனுபவித்தேன்.”</p>
+                <strong>– சாட்சி 12</strong>
+              </div>
+            </div>
+
+            <!-- Slide 13 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“கடவுளின் அருளை உணர்ந்தேன்.”</p>
+                <strong>– சாட்சி 13</strong>
+              </div>
+            </div>
+
+            <!-- Slide 14 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“என் நம்பிக்கை இங்கே வலுவடைந்தது.”</p>
+                <strong>– சாட்சி 14</strong>
+              </div>
+            </div>
+
+            <!-- Slide 15 -->
+            <div class="carousel-item">
+              <div class="testimonial-card" data-aos="zoom-in">
+                <p>“இங்கே நான் சூரியன் போன்ற ஒளியை கண்டேன்.”</p>
+                <strong>– சாட்சி 15</strong>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- // end of loading div -->
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <script>
+    function toggleNotice() {
+      const sidebar = document.getElementById('notice-sidebar');
+      sidebar.classList.toggle('active');
+    }
+
+    // Close sidebar when scrolling past the first section
+    window.addEventListener('scroll', () => {
+      const sidebar = document.getElementById('notice-sidebar');
+      const videoSection = document.querySelector('.video-background');
+      const endOfVideo = videoSection.offsetTop + videoSection.offsetHeight;
+
+      if (window.scrollY > endOfVideo && sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+      }
+    });
+  </script>
+
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const mainContent = document.getElementById("main-content");
+
+      loader.style.opacity = '0';
+      loader.style.transition = 'opacity 1s ease';
+
+      setTimeout(() => {
+        loader.style.display = 'none';
+        mainContent.style.display = 'block';
+      }, 1000);
+    });
+  </script>
+
+</body>
+
+</html>
