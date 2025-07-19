@@ -39,11 +39,13 @@
       <div class="container-fluid">
 
         <!-- Brand: Logos + Title -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <div class="navbar-brand d-flex align-items-center">
           <img src="./Source/CHURCHLOGO.jpg" alt="Church Logo">
           <span class="fw-bold text-white ms-2">CSI PASTORATE CHURCH</span>
-          <img src="./Source/CSILOGO.png" alt="CSI Logo">
-        </a>
+          <a href="https://csikkd.org/" target="_blank">
+            <img src="./Source/CSILOGO.png" alt="CSI Logo">
+          </a>
+        </div>
 
         <!-- Toggle Button for Mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -99,11 +101,15 @@
             </li>
 
             <!-- Social Media Icons -->
-            <li class="nav-item social-icons"><a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="nav-item social-icons"><a class="nav-link" href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="nav-item social-icons"><a class="nav-link" href="#"><i class="fab fa-youtube"></i></a></li>
-            <li class="nav-item social-icons"><a class="nav-link" href="mailto:example@example.com"><i
-                  class="fas fa-envelope"></i></a></li>
+            <li class="nav-item social-icons"><a class="nav-link"
+                href="https://www.instagram.com/csi_pastorate_church_mangarai?igsh=MTNkdGkyMms2eDU0cQ=="><i
+                  class="fab fa-instagram"></i></a></li>
+            <li class="nav-item social-icons"><a class="nav-link" href="https://www.facebook.com/share/1CAV23YxLN/"><i
+                  class="fab fa-facebook-f"></i></a></li>
+            <li class="nav-item social-icons"><a class="nav-link"
+                href="https://www.youtube.com/@csipastoratechurchmangarai"><i class="fab fa-youtube"></i></a></li>
+            <li class="nav-item social-icons"><a class="nav-link" href="mailto:csipastoratechurchmangarai@gmail.com">
+                <i class="fas fa-envelope"></i></a></li>
 
           </ul>
         </div>
@@ -120,7 +126,7 @@
       <div class="video-content">
         <h1 class="display-4 fw-bold">WELCOME TO CSI PASTORATE CHURCH MANGARAI</h1>
         <div class="mt-4">
-          <a href="#" class="btn btn-danger btn-custom">WATCH ONLINE</a>
+          <a href="https://www.youtube.com/@csipastoratechurchmangarai/streams" target="_self" class="btn btn-danger btn-custom">WATCH ONLINE</a>
           <a href="#" class="btn btn-primary btn-custom">PRAYER REQUEST</a>
         </div>
       </div>
@@ -131,45 +137,16 @@
       <i class="fas fa-bell"></i>
     </div>
 
-    <!-- 📋 Notice Sidebar -->
-    <div id="notice-sidebar">
-      <div class="notice-header">
-        <h5>📢 Announcements</h5>
-        <button onclick="toggleNotice()" class="close-btn">&times;</button>
-      </div>
-      <div class="notice-content">
-        <div class="notice-list">
-          <h6>Latest Notices</h6>
-          <ul id="notice-list">
-            <li>Sunday Worship @ 8:30 AM</li>
-            <li>Friday Night Prayer @ 6:30 PM</li>
-            <li>Youth Camp Registration Open</li>
-            <li>Choir Practice at 7:00 AM</li>
-            <li>Women's Fellowship this Saturday</li>
-            <li>Special Fasting Prayer - Aug 15</li>
-            <li>Harvest Festival Planning Meeting</li>
-            <li>New Members Welcome Service</li>
-            <li>Sunday School Resumes This Week</li>
-            <li>Committee Meeting Next Sunday</li>
-          </ul>
-        </div>
-        <div class="event-list">
-          <h6 class="text-warning">Upcoming Events</h6>
-          <ul id="event-list">
-            <li class="highlight">Aug 15 – Independence Day Prayer</li>
-            <li class="highlight">Aug 18 – Youth Sunday</li>
-            <li class="highlight">Aug 25 – Healing Service</li>
-            <li class="highlight">Sep 01 – Communion Service</li>
-            <li class="highlight">Sep 07 – Choir Auditions</li>
-            <li class="highlight">Sep 10 – Outreach Program</li>
-            <li class="highlight">Sep 15 – Women's Retreat</li>
-            <li class="highlight">Sep 20 – Bible Quiz Finals</li>
-            <li class="highlight">Sep 25 – Family Counseling Day</li>
-            <li class="highlight">Sep 30 – Youth Talent Show</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+   <!-- 📋 Notice Sidebar -->
+<div id="notice-sidebar">
+  <div class="notice-header">
+    <h5>📢 Announcements</h5>
+    <button onclick="toggleNotice()" class="close-btn">&times;</button>
+  </div>
+
+  <!-- 👇 Add this iframe to load the notice page -->
+  <iframe src="./Sub-Index/notice.html" width="100%" height="400px" style="border: none;"></iframe>
+</div>
 
     <!-- Church History Section -->
     <section class="py-5 bg-light" id="church-history" data-aos="fade-up">
@@ -251,81 +228,91 @@
 
 
     <!-- Office Bearers Section -->
-    <section id="office-bearers" class="position-relative text-white overflow-hidden">
+<section id="office-bearers" class="position-relative text-white overflow-hidden">
 
-      <script>
-        const useVideoBackground = true;
-        window.addEventListener("DOMContentLoaded", () => {
-          const bgContainer = document.getElementById("background-container");
-          if (useVideoBackground) {
-            bgContainer.innerHTML = `
-          <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover z-n1">
-            <source src="./Source/bearers background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        `;
-          } else {
-            bgContainer.innerHTML = `
-          <div class="position-absolute top-0 start-0 w-100 h-100 z-n1" 
-               style="background: linear-gradient(to right, #111, #222, #111); background-size: cover;"></div>
-        `;
-          }
-        });
-      </script>
+  <script>
+    const useVideoBackground = true;
+    window.addEventListener("DOMContentLoaded", () => {
+      const bgContainer = document.getElementById("background-container");
+      if (useVideoBackground) {
+        bgContainer.innerHTML = `
+        <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover z-n1">
+          <source src="./Source/bearers background.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      `;
+      } else {
+        bgContainer.innerHTML = `
+        <div class="position-absolute top-0 start-0 w-100 h-100 z-n1" 
+             style="background: linear-gradient(to right, #111, #222, #111); background-size: cover;"></div>
+      `;
+      }
+    });
+  </script>
 
-      <div id="background-container"></div>
-      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 0;">
-      </div>
+  <!-- Video or fallback background -->
+  <div id="background-container"></div>
 
-      <div class="container py-5 position-relative" style="z-index: 1;">
-        <h2 class="fw-bold text-center mb-4" data-aos="fade-up">Office Bearers</h2>
-        <div class="mx-auto mb-5 col-md-6" style="width: 100px; height: 4px; background: #e91e63; border-radius: 2px;">
-        </div>
+  <!-- Overlay for dark effect -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 0;"></div>
 
-        <div class="row g-4">
-          <!-- Card Template -->
-          <div class="col-12 col-sm-6 col-lg-3 col-md-6" data-aos="fade-up">
-            <div class="card h-90 shadow border-0 hover-effect">
-              <img src="./Source/chairman.jpg" class="card-img-top" alt="Chairman">
-              <div class="card-body text-center bg-light">
-                <h6 class="text-danger mb-1">Rev. Herold Anith</h6>
-                <p class="text-muted mb-0">Chairman</p>
-              </div>
-            </div>
-          </div>
+  <!-- Section Content -->
+  <div class="container py-5 position-relative" style="z-index: 1;">
+    <h2 class="fw-bold text-center mb-4" data-aos="fade-up">Office Bearers</h2>
+    <div class="mx-auto mb-5 col-md-6" style="width: 100px; height: 4px; background: #e91e63; border-radius: 2px;">
+    </div>
 
-          <div class="col-12 col-sm-6 col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card h-900 shadow border-0 hover-effect">
-              <img src="person2.jpg" class="card-img-top" alt="Secretary">
-              <div class="card-body text-center bg-light">
-                <h6 class="text-danger mb-1">G. PACKIA SELVAN B.Sc., B.Ed.</h6>
-                <p class="text-muted mb-0">HON. SECRETARY</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card h-800 shadow border-0 hover-effect">
-              <img src="./Source/treasurerimage.jpg" class="card-img-top" alt="Treasurer">
-              <div class="card-body text-center bg-light">
-                <h6 class="text-danger mb-1">Mr.Selvin Yesudhas</h6>
-                <p class="text-muted mb-0">TREASURER</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card h-10 shadow border-0 hover-effect">
-              <img src="./Source/accountantimage.jpg" class="card-img-top" alt="Member">
-              <div class="card-body text-center bg-light">
-                <h6 class="text-danger mb-1">Mr.Jeya Paul</h6>
-                <p class="text-muted mb-0">ACCOUNTANT</p>
-              </div>
-            </div>
+    <!-- Responsive Grid: 2 columns on mobile, 4 on large screens -->
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4 g-4">
+      
+      <!-- Card 1 -->
+      <div class="col" data-aos="fade-up">
+        <div class="card h-100 shadow border-0 hover-effect">
+          <img src="./Source/chairman.jpg" class="card-img-top" alt="Chairman">
+          <div class="card-body text-center bg-light">
+            <h6 class="text-danger mb-1">Rev. Herold Anith</h6>
+            <p class="text-muted mb-0">Chairman</p>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Card 2 -->
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow border-0 hover-effect">
+          <img src="person2.jpg" class="card-img-top" alt="Secretary">
+          <div class="card-body text-center bg-light">
+            <h6 class="text-danger mb-1">G. PACKIA SELVAN B.Sc., B.Ed.</h6>
+            <p class="text-muted mb-0">HON. SECRETARY</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow border-0 hover-effect">
+          <img src="./Source/treasurerimage.jpg" class="card-img-top" alt="Treasurer">
+          <div class="card-body text-center bg-light">
+            <h6 class="text-danger mb-1">Mr.Selvin Yesudhas</h6>
+            <p class="text-muted mb-0">TREASURER</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 shadow border-0 hover-effect">
+          <img src="./Source/accountantimage.jpg" class="card-img-top" alt="Member">
+          <div class="card-body text-center bg-light">
+            <h6 class="text-danger mb-1">Mr.Jeya Paul</h6>
+            <p class="text-muted mb-0">ACCOUNTANT</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -503,6 +490,41 @@
       </div>
     </div>
 
+<!-- Section containing the iframe -->
+<section class="galleryview-container">
+  <div class="background-pattern"></div> <!-- Optional background pattern -->
+
+  <div class="content-overlay">
+    <iframe src="./Sub-Index/gallery.html" class="galleryview" id="galleryFrame" scrolling="yes"></iframe>
+  </div>
+</section>
+
+<!-- Script to handle iframe resizing -->
+<script>
+  // Send a request for resizing when the page loads or is resized
+  function requestIframeResize() {
+    const iframe = document.getElementById('galleryFrame');
+    if (iframe) {
+      iframe.contentWindow.postMessage({ type: 'requestHeight' }, '*');
+    }
+  }
+
+  // Listen for the iframe's response and adjust its height
+  window.addEventListener('message', function(event) {
+    if (event.data.type === 'galleryHeight') {
+      const iframe = document.getElementById('galleryFrame');
+      if (iframe) {
+        iframe.style.height = event.data.height + 'px';
+      }
+    }
+  });
+
+  // Automatically request height adjustment on load and resize
+  window.addEventListener('load', requestIframeResize);
+  window.addEventListener('resize', requestIframeResize);
+</script>
+
+
     <section class="testimonial-section text-center" id="testimonial-section">
       <div class="container">
         <h2 class="testimonial-section-heading">வாக்குமூலங்கள்</h2>
@@ -654,16 +676,27 @@
       </div>
     </section>
 
+<section class="gallery-section mt-0 mb-auto">
+  <iframe 
+    src="./Sub-Index/joinusofservice.html" 
+    class="galleryview" 
+    style="width:100%; border:none;" 
+    scrolling="no"
+    onload="resizeIframe(this)">
+  </iframe>
+</section>
 
 
-
+<section class="map-iframe-container ">
+  <iframe class="mapiframe" src="./Sub-Index/map.html" loading="lazy" scrolling="no" frameborder="0" onload="resizeIframe(this)"></iframe>
+</section>
 
 
 
 
 
     <!-- // end of loading div -->
-  </div>
+</div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({
@@ -715,6 +748,32 @@
       }, 1000);
     });
   </script>
+<script>
+  function resizeIframe(iframe) {
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+  }
+</script>
+<script>
+  function resizeIframe(iframe) {
+    setTimeout(() => {
+      try {
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+      } catch (e) {
+        console.warn("Could not access iframe content for resizing.");
+      }
+    }, 500);
+  }
+</script>
+<script>
+  window.addEventListener('message', (event) => {
+    if (event.data.type === 'resize-map-iframe') {
+      const iframe = document.querySelector('.mapiframe');
+      if (iframe) {
+        iframe.style.height = event.data.height + 'px';
+      }
+    }
+  });
+</script>
 
 </body>
 
