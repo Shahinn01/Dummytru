@@ -1171,6 +1171,34 @@
       }
     });
   </script>
+  <script>
+    const flipCard = document.getElementById('devFlipCard');
+    const devImage = document.querySelector('.dev-image');
+
+    let lastTap = 0;
+    let isZoomed = false;
+
+    // Tap to flip
+    flipCard.addEventListener('click', () => {
+      flipCard.classList.toggle('flipped');
+    });
+
+    // Double tap to zoom (for mobile)
+    devImage.addEventListener('touchstart', function (e) {
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap;
+
+      if (tapLength < 300 && tapLength > 0) {
+        // Double-tap detected
+        e.preventDefault();
+        isZoomed = !isZoomed;
+        devImage.classList.toggle('zoomed', isZoomed);
+      }
+
+      lastTap = currentTime;
+    });
+  </script>
+
 
 
 
