@@ -616,16 +616,18 @@ body {
 /* 🔷 Background image */
 .testimonial-section {
   position: relative;
-  background: url('../Source/testimony.jpg') no-repeat center center/cover;
+  background: url('') no-repeat center center/cover;
+  background-color: grey;
   padding: 0px 0;
   margin-top: 20px;
   color: #fff;
   overflow: hidden;
-  height: 240px;
+  height: 300px;
 }
 
 .testimonial-section-heading {
-  font-size: 40px;
+  font-size: 30px;
+  padding-top: 10px;
 }
 
 .testimonial-carousel-inner {
@@ -704,38 +706,372 @@ body {
     transition: height 0.3s ease;
   }
 
- /* Ensuring the iframe is fully responsive */
-    iframe {
-      width: 100%;
-      height: 100vh;  /* Adjust to full screen height */
-      border: none;
+ /* gallery styles */
+.galleryindex-section {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+  transition: background 0.4s, color 0.4s;
+  color: #000;
+  position: relative;
+}
+.galleryindex-section.dark-mode {
+  background: linear-gradient(to bottom, #111, #1a1a1a);
+  color: #fff;
+}
+
+.galleryindex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  padding: 0 10px;
+}
+.galleryindex-title {
+  font-size: 2.5rem;
+  
+}
+.toggle-mode {
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: #003c8f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+.toggle-mode:hover {
+  background: #0059c0;
+  transform: scale(1.1);
+}
+
+.galleryindex-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.galleryindex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.galleryindex-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.galleryindex-card:hover {
+  transform: scale(1.03);
+  border: 2px solid #3399ff;
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.4);
+}
+
+.galleryindex-section.dark-mode .galleryindex-card {
+  background: #1f1f1f;
+  border-color: #444;
+}
+.galleryindex-section.dark-mode .galleryindex-card:hover {
+  border-color: #3399ff;
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.3);
+}
+
+.galleryindex-card img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s, filter 0.3s;
+}
+.galleryindex-card img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.view-btn {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #003c8f;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.view-btn:hover {
+  background-color: #0059c0;
+  transform: translateY(-2px);
+}
+
+.galleryindex-section.dark-mode .view-btn {
+  background: #444;
+}
+.galleryindex-section.dark-mode .view-btn:hover {
+  background: #666;
+}
+
+/* JOINUSFORSERVICE */
+ .joinusofservice {
+      position: relative;
+      padding: 60px 0;
+      background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .floating-icon {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.2;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    .floating-icon.cross1 { top: 10%; left: 15%; animation-delay: 0s; }
+    .floating-icon.cross2 { top: 40%; right: 10%; animation-delay: 2s; }
+    .floating-icon.cross3 { bottom: 15%; left: 25%; animation-delay: 4s; }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .content-text, .media-content {
+      padding: 30px;
+      border-radius: 15px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .content-text {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+    .media-content {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: black;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    .dropdown:hover .dropdown-menu {
       display: block;
     }
-        /* Optional: add styles for galleryview-container */
-    .galleryview-container {
-      width: 100%;
-      position: relative;
+
+    .image-row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
     }
 
-    /* Optional: styling for background pattern */
-    .background-pattern {
-      background: #f0f0f0; /* Example pattern */
+    .image-row img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .video-row {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .video-btn {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .video-btn:hover {
+      background-color: #c82333;
+    }
+
+    @media (max-width: 768px) {
+      .image-row {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .wave-divider {
+      position: relative;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    .wave-divider::after {
+      content: "";
       position: absolute;
-      top: 0;
+      top: -40px;
       left: 0;
       width: 100%;
+      height: 150px;
+      background: url('https://www.svgbackgrounds.com/wp-content/uploads/2021/05/wave-haikei.svg') no-repeat bottom center;
+      background-size: cover;
+    }
+
+    /* Modal */
+    .modal-dialog {
+      max-width: 100%;
       height: 100%;
-      z-index: 0;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Styling for the content overlay to fit iframe */
-    .content-overlay {
-      position: relative;
-      z-index: 1;
-    }
-
-    iframe.galleryview {
-      width: 100%;
+    .modal-content {
+      height: 100%;
       border: none;
-      height: 600px; /* Initial height, will be adjusted dynamically */
+      border-radius: 0;
+      background-color: black;
+    }
+
+    .modal-body {
+      padding: 0;
+      position: relative;
+      height: 100%;
+    }
+
+    .modal-body iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    /* MAP SECTION */
+    .map-section {
+      min-height: 25vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      backdrop-filter: blur(2px);
+    }
+
+    .map-heading {
+      width: 100%;
+      text-align: center;
+      color: red;
+      font-size: 35px;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .map-buttons {
+      flex: 1;
+      min-width: 260px;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .map-buttons button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      width: 100%;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 10px;
+      border: none;
+      transition: all 0.3s ease;
+      background: rgba(0, 123, 255, 0.8);
+      color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .map-buttons button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .map-buttons i {
+      font-size: 20px;
+    }
+
+    .map-display {
+      flex: 2;
+      padding: 10px;
+      position: relative;
+      text-align: center;
+    }
+
+    .map-display iframe {
+      width: 100%;
+      height: 220px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    /* Fullscreen Map */
+    .fullscreen-map {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fullscreen-map iframe {
+      width: 90%;
+      height: 90%;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+    }
+
+    @media (max-width: 768px) {
+      .map-section {
+        flex-direction: column;
+        padding: 10px;
+        min-height: 35vh;
+      }
+
+      .map-display iframe {
+        height: 200px;
+      }
     }
