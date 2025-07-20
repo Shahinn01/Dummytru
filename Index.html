@@ -18,6 +18,12 @@
   <!-- AOS CSS (Animate on Scroll) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
+  <!-- CSS Links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="./Styles/church-footer.css" rel="stylesheet">
+
 
   <link rel="stylesheet" href="./Styles/styles.css">
 </head>
@@ -126,7 +132,8 @@
       <div class="video-content">
         <h1 class="display-4 fw-bold">WELCOME TO CSI PASTORATE CHURCH MANGARAI</h1>
         <div class="mt-4">
-          <a href="https://www.youtube.com/@csipastoratechurchmangarai/streams" target="_self" class="btn btn-danger btn-custom">WATCH ONLINE</a>
+          <a href="https://www.youtube.com/@csipastoratechurchmangarai/streams" target="_self"
+            class="btn btn-danger btn-custom">WATCH ONLINE</a>
           <a href="#" class="btn btn-primary btn-custom">PRAYER REQUEST</a>
         </div>
       </div>
@@ -137,16 +144,16 @@
       <i class="fas fa-bell"></i>
     </div>
 
-   <!-- 📋 Notice Sidebar -->
-<div id="notice-sidebar">
-  <div class="notice-header">
-    <h5>📢 Announcements</h5>
-    <button onclick="toggleNotice()" class="close-btn">&times;</button>
-  </div>
+    <!-- 📋 Notice Sidebar -->
+    <div id="notice-sidebar">
+      <div class="notice-header">
+        <h5>📢 Announcements</h5>
+        <button onclick="toggleNotice()" class="close-btn">&times;</button>
+      </div>
 
-  <!-- 👇 Add this iframe to load the notice page -->
-  <iframe src="./Sub-Index/notice.html" width="100%" height="400px" style="border: none;"></iframe>
-</div>
+      <!-- 👇 Add this iframe to load the notice page -->
+      <iframe src="./Sub-Index/notice.html" width="100%" height="400px" style="border: none;"></iframe>
+    </div>
 
     <!-- Church History Section -->
     <section class="py-5 bg-light" id="church-history" data-aos="fade-up">
@@ -228,90 +235,91 @@
 
 
     <!-- Office Bearers Section -->
-<section id="office-bearers" class="position-relative text-white overflow-hidden">
+    <section id="office-bearers" class="position-relative text-white overflow-hidden">
 
-  <script>
-    const useVideoBackground = true;
-    window.addEventListener("DOMContentLoaded", () => {
-      const bgContainer = document.getElementById("background-container");
-      if (useVideoBackground) {
-        bgContainer.innerHTML = `
+      <script>
+        const useVideoBackground = true;
+        window.addEventListener("DOMContentLoaded", () => {
+          const bgContainer = document.getElementById("background-container");
+          if (useVideoBackground) {
+            bgContainer.innerHTML = `
         <video autoplay muted loop playsinline class="position-absolute w-100 h-100 object-fit-cover z-n1">
           <source src="./Source/bearers background.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       `;
-      } else {
-        bgContainer.innerHTML = `
+          } else {
+            bgContainer.innerHTML = `
         <div class="position-absolute top-0 start-0 w-100 h-100 z-n1" 
              style="background: linear-gradient(to right, #111, #222, #111); background-size: cover;"></div>
       `;
-      }
-    });
-  </script>
+          }
+        });
+      </script>
 
-  <!-- Video or fallback background -->
-  <div id="background-container"></div>
+      <!-- Video or fallback background -->
+      <div id="background-container"></div>
 
-  <!-- Overlay for dark effect -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 0;"></div>
-
-  <!-- Section Content -->
-  <div class="container py-5 position-relative" style="z-index: 1;">
-    <h2 class="fw-bold text-center mb-4" data-aos="fade-up">Office Bearers</h2>
-    <div class="mx-auto mb-5 col-md-6" style="width: 100px; height: 4px; background: #e91e63; border-radius: 2px;">
-    </div>
-
-    <!-- Responsive Grid: 2 columns on mobile, 4 on large screens -->
-    <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4 g-4">
-      
-      <!-- Card 1 -->
-      <div class="col" data-aos="fade-up">
-        <div class="card h-100 shadow border-0 hover-effect">
-          <img src="./Source/chairman.jpg" class="card-img-top" alt="Chairman">
-          <div class="card-body text-center bg-light">
-            <h6 class="text-danger mb-1">Rev. Herold Anith</h6>
-            <p class="text-muted mb-0">Chairman</p>
-          </div>
-        </div>
+      <!-- Overlay for dark effect -->
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.6); z-index: 0;">
       </div>
 
-      <!-- Card 2 -->
-      <div class="col" data-aos="fade-up" data-aos-delay="100">
-        <div class="card h-100 shadow border-0 hover-effect">
-          <img src="person2.jpg" class="card-img-top" alt="Secretary">
-          <div class="card-body text-center bg-light">
-            <h6 class="text-danger mb-1">G. PACKIA SELVAN B.Sc., B.Ed.</h6>
-            <p class="text-muted mb-0">HON. SECRETARY</p>
+      <!-- Section Content -->
+      <div class="container py-5 position-relative" style="z-index: 1;">
+        <h2 class="fw-bold text-center mb-4" data-aos="fade-up">Office Bearers</h2>
+        <div class="mx-auto mb-5 col-md-6" style="width: 100px; height: 4px; background: #e91e63; border-radius: 2px;">
+        </div>
+
+        <!-- Responsive Grid: 2 columns on mobile, 4 on large screens -->
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4 g-4">
+
+          <!-- Card 1 -->
+          <div class="col" data-aos="fade-up">
+            <div class="card h-100 shadow border-0 hover-effect">
+              <img src="./Source/chairman.jpg" class="card-img-top" alt="Chairman">
+              <div class="card-body text-center bg-light">
+                <h6 class="text-danger mb-1">Rev. Herold Anith</h6>
+                <p class="text-muted mb-0">Chairman</p>
+              </div>
+            </div>
           </div>
+
+          <!-- Card 2 -->
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 shadow border-0 hover-effect">
+              <img src="person2.jpg" class="card-img-top" alt="Secretary">
+              <div class="card-body text-center bg-light">
+                <h6 class="text-danger mb-1">G. PACKIA SELVAN B.Sc., B.Ed.</h6>
+                <p class="text-muted mb-0">HON. SECRETARY</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 shadow border-0 hover-effect">
+              <img src="./Source/treasurerimage.jpg" class="card-img-top" alt="Treasurer">
+              <div class="card-body text-center bg-light">
+                <h6 class="text-danger mb-1">Mr.Selvin Yesudhas</h6>
+                <p class="text-muted mb-0">TREASURER</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 shadow border-0 hover-effect">
+              <img src="./Source/accountantimage.jpg" class="card-img-top" alt="Member">
+              <div class="card-body text-center bg-light">
+                <h6 class="text-danger mb-1">Mr.Jeya Paul</h6>
+                <p class="text-muted mb-0">ACCOUNTANT</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- Card 3 -->
-      <div class="col" data-aos="fade-up" data-aos-delay="200">
-        <div class="card h-100 shadow border-0 hover-effect">
-          <img src="./Source/treasurerimage.jpg" class="card-img-top" alt="Treasurer">
-          <div class="card-body text-center bg-light">
-            <h6 class="text-danger mb-1">Mr.Selvin Yesudhas</h6>
-            <p class="text-muted mb-0">TREASURER</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col" data-aos="fade-up" data-aos-delay="300">
-        <div class="card h-100 shadow border-0 hover-effect">
-          <img src="./Source/accountantimage.jpg" class="card-img-top" alt="Member">
-          <div class="card-body text-center bg-light">
-            <h6 class="text-danger mb-1">Mr.Jeya Paul</h6>
-            <p class="text-muted mb-0">ACCOUNTANT</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
@@ -489,44 +497,45 @@
 
       </div>
     </div>
-<!-- gallery sectio -->
-<section class="galleryindex-section light-mode" id="gallery">
-  <div class="galleryindex-header">
-    <h2 class="galleryindex-title">GALLERY</h2>
-    <button class="toggle-mode" onclick="toggleGalleryMode()">🌓</button>
-  </div>
-
-  <div class="galleryindex-container">
-    <div class="galleryindex-grid">
-      
-      <!-- Image Gallery Card -->
-      <div class="galleryindex-card" data-aos="zoom-in-up">
-        <h3>Image Gallery</h3>
-        <a href="images/photo1.jpg" data-lightbox="gallery">
-          <img src="./Sub-Index/Gallery-image/simple.jpg" alt="Image Gallery Preview" />
-        </a>
-        <a href="gallery.html" target="_self" class="view-btn">View More →</a>
+    <!-- gallery sectio -->
+    <section class="galleryindex-section light-mode" id="gallery">
+      <div class="galleryindex-header">
+        <h2 class="galleryindex-title">GALLERY</h2>
+        <button class="toggle-mode" onclick="toggleGalleryMode()">🌓</button>
       </div>
 
-      <!-- Video Gallery Card -->
-      <div class="galleryindex-card" data-aos="zoom-in-up" data-aos-delay="100">
-        <h3>Video Gallery</h3>
-        <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-        <a href="https://www.youtube.com/@yourchannel" target="_self" class="view-btn">View More →</a>
-      </div>
+      <div class="galleryindex-container">
+        <div class="galleryindex-grid">
 
-      <!-- Achievement Gallery Card -->
-      <div class="galleryindex-card" data-aos="zoom-in-up" data-aos-delay="200">
-        <h3>Achievement Gallery</h3>
-        <a href="images/achievement.jpg" data-lightbox="gallery">
-          <img src="./Sub-Index/Gallery-image/simple.jpg" alt="Achievement Gallery Preview" />
-        </a>
-        <a href="achievements.html" target="_self" class="view-btn">View More →</a>
-      </div>
+          <!-- Image Gallery Card -->
+          <div class="galleryindex-card" data-aos="zoom-in-up">
+            <h3>Image Gallery</h3>
+            <a href="images/photo1.jpg" data-lightbox="gallery">
+              <img src="./Sub-Index/Gallery-image/simple.jpg" alt="Image Gallery Preview" />
+            </a>
+            <a href="gallery.html" target="_self" class="view-btn">View More →</a>
+          </div>
 
-    </div>
-  </div>
-</section>
+          <!-- Video Gallery Card -->
+          <div class="galleryindex-card" data-aos="zoom-in-up" data-aos-delay="100">
+            <h3>Video Gallery</h3>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"
+              allowfullscreen></iframe>
+            <a href="https://www.youtube.com/@yourchannel" target="_self" class="view-btn">View More →</a>
+          </div>
+
+          <!-- Achievement Gallery Card -->
+          <div class="galleryindex-card" data-aos="zoom-in-up" data-aos-delay="200">
+            <h3>Achievement Gallery</h3>
+            <a href="images/achievement.jpg" data-lightbox="gallery">
+              <img src="./Sub-Index/Gallery-image/simple.jpg" alt="Achievement Gallery Preview" />
+            </a>
+            <a href="achievements.html" target="_self" class="view-btn">View More →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 
 
@@ -681,100 +690,257 @@
       </div>
     </section>
 
-<!-- Join Us for Services Section -->
-<section class="joinusofservice" id="services">
-  <!-- Floating icons -->
-  <div class="floating-icon cross1"><i class="fas fa-cross"></i></div>
-  <div class="floating-icon cross2"><i class="fas fa-dove"></i></div>
-  <div class="floating-icon cross3"><i class="fas fa-cross"></i></div>
+    <!-- Join Us for Services Section -->
+    <section class="joinusofservice" id="services">
+      <!-- Floating icons -->
+      <div class="floating-icon cross1"><i class="fas fa-cross"></i></div>
+      <div class="floating-icon cross2"><i class="fas fa-dove"></i></div>
+      <div class="floating-icon cross3"><i class="fas fa-cross"></i></div>
 
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Left Column -->
-      <div class="col-md-6 mb-4">
-        <div class="content-text">
-          <h2 class="mb-3">Join Us for Services</h2>
-          <p>Experience our services at multiple locations: Kannur, Indianmang, and the FGAG Church Retreat Center. Services are in English, Tamil, Kannada, Hindi, and Nepali.</p>
-          <p>Join us this Sunday at any of these locations.</p>
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Column -->
+          <div class="col-md-6 mb-4">
+            <div class="content-text">
+              <h2 class="mb-3">Join Us for Services</h2>
+              <p>Experience our services at multiple locations: Kannur, Indianmang, and the FGAG Church Retreat Center.
+                Services are in English, Tamil, Kannada, Hindi, and Nepali.</p>
+              <p>Join us this Sunday at any of these locations.</p>
 
-          <!-- Dropdown -->
-          <div class="dropdown mt-3">
-            <button class="btn btn-light dropdown-toggle" type="button" id="locationDropdown" aria-expanded="false">
-              See Location
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="locationDropdown">
-              <li><a class="dropdown-item" href="#">Kannur</a></li>
-              <li><a class="dropdown-item" href="#">Indianmang</a></li>
-              <li><a class="dropdown-item" href="#">Prayer & Retreat Center</a></li>
-            </ul>
+              <!-- Dropdown -->
+              <div class="dropdown mt-3">
+                <button class="btn btn-light dropdown-toggle" type="button" id="locationDropdown" aria-expanded="false">
+                  See Location
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+                  <li><a class="dropdown-item" href="#">Kannur</a></li>
+                  <li><a class="dropdown-item" href="#">Indianmang</a></li>
+                  <li><a class="dropdown-item" href="#">Prayer & Retreat Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-md-6">
+            <div class="media-content">
+              <div class="image-row">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Kl2bbfRyvB14YWxa0eOtjm9cEGvDmO2zfw&s"
+                  alt="Service 1">
+                <img src="https://i.ytimg.com/vi/2h2bYbXyPW0/sddefault.jpg" alt="Service 2">
+              </div>
+
+              <div class="video-row mt-4">
+                <button class="video-btn" data-bs-toggle="modal" data-bs-target="#videoModal">
+                  <i class="fas fa-play-circle me-2"></i> Watch Service
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Right Column -->
-      <div class="col-md-6">
-        <div class="media-content">
-          <div class="image-row">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Kl2bbfRyvB14YWxa0eOtjm9cEGvDmO2zfw&s" alt="Service 1">
-            <img src="https://i.ytimg.com/vi/2h2bYbXyPW0/sddefault.jpg" alt="Service 2">
-          </div>
+    <!-- Section Divider -->
+    <div class="wave-divider"></div>
 
-          <div class="video-row mt-4">
-            <button class="video-btn" data-bs-toggle="modal" data-bs-target="#videoModal">
-              <i class="fas fa-play-circle me-2"></i> Watch Service
-            </button>
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Section Divider -->
-<div class="wave-divider"></div>
 
-<!-- Video Modal -->
-<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+    <!-- 📍 Map Section -->
+    <section class="map-section">
+      <div class="map-heading">📍 Location</div>
+
+      <!-- Selection Buttons -->
+      <div class="map-buttons">
+        <button onclick="changeMap(0)"><i class="fas fa-church"></i> CSI Mangarai Church</button>
+        <button onclick="changeMap(1)"><i class="fas fa-building"></i> CSI Community Hall, Mangarai</button>
+        <button onclick="changeMap(2)"><i class="fas fa-map-marked-alt"></i> Kanyakumari Diocese, Nagercoil</button>
       </div>
+
+      <!-- Map Preview -->
+      <div class="map-display">
+        <iframe id="churchMap" src="https://www.google.com/maps?q=CSI+Mangarai+Church&output=embed"
+          onclick="openFullscreen()"></iframe>
+      </div>
+    </section>
+
+    <!-- 🗺️ Fullscreen Map Modal -->
+    <div class="fullscreen-map" id="fullscreenMap">
+      <div class="close-btn" onclick="closeFullscreen()"><i class="fas fa-times"></i></div>
+      <iframe id="fullscreenFrame" src=""></iframe>
     </div>
-  </div>
-</div>
 
 
+    <!-- FOOTER SECTION START -->
+    <section class="footer-wrapper">
+      <footer class="footer" data-aos="fade-up">
+        <div class="container">
+          <div class="row text-center text-md-start">
+            <!-- Logo/About -->
+            <div class="col-md-3 footer-section">
+              <div class="footer-logo mb-3">
+                <img src="logo.png" alt="Church Logo">
+              </div>
+              <p>Welcome to our church community. Stay connected through our website and events.</p>
+            </div>
 
-<!-- 📍 Map Section -->
-<section class="map-section">
-  <div class="map-heading">📍 Location</div>
+            <!-- Contact Info -->
+            <div class="col-md-3 footer-section">
+              <h5>Contact</h5>
+              <p><i class="fas fa-map-marker-alt"></i> 123 Church Street, City</p>
+              <p><i class="fas fa-phone"></i> +91 9876543210</p>
+              <p><i class="fas fa-envelope"></i> church@email.com</p>
+            </div>
 
-  <!-- Selection Buttons -->
-  <div class="map-buttons">
-    <button onclick="changeMap(0)"><i class="fas fa-church"></i> CSI Mangarai Church</button>
-    <button onclick="changeMap(1)"><i class="fas fa-building"></i> CSI Community Hall, Mangarai</button>
-    <button onclick="changeMap(2)"><i class="fas fa-map-marked-alt"></i> Kanyakumari Diocese, Nagercoil</button>
-  </div>
+            <!-- Quick Links -->
+            <div class="col-md-2 footer-section footer-links">
+              <h5>Quick Links</h5>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Events</a>
+              <a href="#">Gallery</a>
+            </div>
 
-  <!-- Map Preview -->
-  <div class="map-display">
-    <iframe id="churchMap" src="https://www.google.com/maps?q=CSI+Mangarai+Church&output=embed" onclick="openFullscreen()"></iframe>
-  </div>
-</section>
+            <!-- Newsletter -->
+            <div class="col-md-4 footer-section">
+              <h5>Newsletter</h5>
+              <p>Subscribe to stay updated with our news and events.</p>
+              <form class="d-flex">
+                <input type="email" placeholder="Your Email" class="form-control me-2 newsletter-input">
+                <button type="submit" class="btn btn-warning glow-btn">Subscribe</button>
+              </form>
+            </div>
+          </div>
 
-<!-- 🗺️ Fullscreen Map Modal -->
-<div class="fullscreen-map" id="fullscreenMap">
-  <div class="close-btn" onclick="closeFullscreen()"><i class="fas fa-times"></i></div>
-  <iframe id="fullscreenFrame" src=""></iframe>
-</div>
+          <!-- Donation Box (New Format) -->
+          <div class="col-md-4 footer-section footer-donation" data-aos="fade-up">
+            <h5>Donation Details</h5>
+            <p><strong>Bank:</strong> ABC Bank</p>
+            <p><strong>Account No:</strong> 1234567890</p>
+            <p><strong>IFSC:</strong> ABCD0123456</p>
+            <button class="btn btn-warning glow-btn mt-2" onclick="toggleDonatePopup()">Donate Now</button>
+          </div>
+
+
+          <!-- Social Icons -->
+          <div class="footer-social mt-4 text-center">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+
+          <!-- Developer Link -->
+          <div class="footer-bottom mt-4">
+            © 2025 CSI Pastorate Church. Developed by
+            <span class="developer-name" onclick="toggleDevPopup()">Shahin N</span>
+
+          </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div id="backToTop" onclick="scrollToTop()">
+          <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <!-- Developer Modal -->
+        <div class="dev-modal-overlay" id="devModal">
+
+          <div class="dev-popup popup-animate">
+            <button class="close-btn" onclick="toggleDevPopup()">&times;</button>
+            <div class="dev-profile">
+              <!-- Developer Flip Card -->
+              <div class="flip-card-container">
+                <div class="flip-card" id="devFlipCard">
+                  <div class="flip-card-front">
+                    <img src="./Source/sha.jpg" alt="Shahin N" class="dev-image" />
+                  </div>
+                  <div class="flip-card-back">
+                    <h4>Shahin N</h4>
+                    <p>Full-Stack Developer</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dev-socials">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Donate Modal -->
+        <div class="donate-modal-overlay" id="donateModal">
+
+          <div class="donate-popup">
+            <button class="close-btn" onclick="toggleDonatePopup()">&times;</button>
+            <h4 class="text-glow">Donate to Support</h4>
+            <p>Bank Name: XYZ Bank<br>Acc No: 1234567890<br>IFSC: XYZB000123</p>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!-- FOOTER SECTION END -->
+
+    <!-- JS Scripts -->
+    <script>
+      // Developer Modal
+      function toggleDevPopup() {
+        document.getElementById('devModal').classList.toggle('active');
+      }
+
+      // Donate Modal
+      function toggleDonatePopup() {
+        document.getElementById('donateModal').classList.toggle('active');
+      }
+
+      // Back to Top Button
+      const backToTopBtn = document.getElementById("backToTop");
+      window.onscroll = () => {
+        if (window.scrollY > 300) backToTopBtn.style.display = "block";
+        else backToTopBtn.style.display = "none";
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+
+
+    <script>
+      let lastTap = 0;
+      const card = document.getElementById('devFlipCard');
+
+      card.addEventListener('touchend', function () {
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTap;
+
+        if (tapLength < 300 && tapLength > 0) {
+          card.classList.toggle('zoomed');
+        }
+        lastTap = currentTime;
+      });
+    </script>
 
 
 
 
     <!-- // end of loading div -->
-</div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({
@@ -826,105 +992,188 @@
       }, 1000);
     });
   </script>
-<script>
-  function resizeIframe(iframe) {
-    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-  }
-</script>
-<script>
-  function resizeIframe(iframe) {
-    setTimeout(() => {
-      try {
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-      } catch (e) {
-        console.warn("Could not access iframe content for resizing.");
-      }
-    }, 500);
-  }
-</script>
-<script>
-  window.addEventListener('message', (event) => {
-    if (event.data.type === 'resize-map-iframe') {
-      const iframe = document.querySelector('.mapiframe');
-      if (iframe) {
-        iframe.style.height = event.data.height + 'px';
-      }
+  <script>
+    function resizeIframe(iframe) {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
     }
-  });
-</script>
-
-<!-- gallery -->
- <!-- AOS (Animate on Scroll) -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({ duration: 800, once: true });
-</script>
-
-<!-- Lightbox -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
-<!-- Dark/Light Toggle Only for Section -->
-<script>
-  function toggleGalleryMode() {
-    document.querySelector(".galleryindex-section").classList.toggle("dark-mode");
-  }
-</script>
-
-<!-- MAP SCRIPT -->
- <!-- Scripts -->
-<script>
-  const mapUrls = [
-    "https://www.google.com/maps?q=CSI+Mangarai+Church&output=embed",
-    "https://www.google.com/maps?q=CSI+Community+Hall+Mangarai&output=embed",
-    "https://www.google.com/maps?q=Kanyakumari+Diocese+Nagercoil&output=embed"
-  ];
-
-  const mapFrame = document.getElementById('churchMap');
-  const fullscreen = document.getElementById('fullscreenMap');
-  const fullscreenFrame = document.getElementById('fullscreenFrame');
-
-  function changeMap(index) {
-    mapFrame.style.opacity = "0";
-    setTimeout(() => {
-      mapFrame.src = mapUrls[index];
-      mapFrame.style.opacity = "1";
-    }, 300);
-  }
-
-  function openFullscreen() {
-    fullscreen.style.display = "flex";
-    fullscreenFrame.src = mapFrame.src;
-  }
-
-  function closeFullscreen() {
-    fullscreen.style.display = "none";
-    fullscreenFrame.src = "";
-  }
-</script>
-<script>
-  window.addEventListener('load', () => {
-    const height = document.body.scrollHeight;
-    window.parent.postMessage({ type: 'resize-map-iframe', height }, '*');
-  });
-</script>
-
-<!-- JOINUSOFSERVICE -->
+  </script>
+  <script>
+    function resizeIframe(iframe) {
+      setTimeout(() => {
+        try {
+          iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+        } catch (e) {
+          console.warn("Could not access iframe content for resizing.");
+        }
+      }, 500);
+    }
+  </script>
+  <script>
+    window.addEventListener('message', (event) => {
+      if (event.data.type === 'resize-map-iframe') {
+        const iframe = document.querySelector('.mapiframe');
+        if (iframe) {
+          iframe.style.height = event.data.height + 'px';
+        }
+      }
+    });
+  </script>
+  <script>
+    function toggleDevPopup() {
+      const popup = document.getElementById('devModal');
+      popup.classList.toggle('active');
+    }
+  </script>
 
 
-<script>
-  const videoModal = document.getElementById('videoModal');
-  const videoFrame = document.getElementById('videoFrame');
+  <!-- gallery -->
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 
-  videoModal.addEventListener('show.bs.modal', function () {
-    videoFrame.src = "https://www.youtube.com/live/RjXjk44Xfsw?feature=shared";
-  });
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
-  videoModal.addEventListener('hide.bs.modal', function () {
-    videoFrame.src = "https://www.youtube.com/live/RjXjk44Xfsw?feature=shared";
-  });
-</script>
+  <!-- Dark/Light Toggle Only for Section -->
+  <script>
+    function toggleGalleryMode() {
+      document.querySelector(".galleryindex-section").classList.toggle("dark-mode");
+    }
+  </script>
+
+  <!-- MAP SCRIPT -->
+  <!-- Scripts -->
+  <script>
+    const mapUrls = [
+      "https://www.google.com/maps?q=CSI+Mangarai+Church&output=embed",
+      "https://www.google.com/maps?q=CSI+Community+Hall+Mangarai&output=embed",
+      "https://www.google.com/maps?q=Kanyakumari+Diocese+Nagercoil&output=embed"
+    ];
+
+    const mapFrame = document.getElementById('churchMap');
+    const fullscreen = document.getElementById('fullscreenMap');
+    const fullscreenFrame = document.getElementById('fullscreenFrame');
+
+    function changeMap(index) {
+      mapFrame.style.opacity = "0";
+      setTimeout(() => {
+        mapFrame.src = mapUrls[index];
+        mapFrame.style.opacity = "1";
+      }, 300);
+    }
+
+    function openFullscreen() {
+      fullscreen.style.display = "flex";
+      fullscreenFrame.src = mapFrame.src;
+    }
+
+    function closeFullscreen() {
+      fullscreen.style.display = "none";
+      fullscreenFrame.src = "";
+    }
+  </script>
+  <script>
+    window.addEventListener('load', () => {
+      const height = document.body.scrollHeight;
+      window.parent.postMessage({ type: 'resize-map-iframe', height }, '*');
+    });
+  </script>
+
+  <!-- JOINUSOFSERVICE -->
+
+
+  <script>
+    const videoModal = document.getElementById('videoModal');
+    const videoFrame = document.getElementById('videoFrame');
+
+    videoModal.addEventListener('show.bs.modal', function () {
+      videoFrame.src = "https://www.youtube.com/live/RjXjk44Xfsw?feature=shared";
+    });
+
+    videoModal.addEventListener('hide.bs.modal', function () {
+      videoFrame.src = "https://www.youtube.com/live/RjXjk44Xfsw?feature=shared";
+    });
+  </script>
+
+
+  <!-- footer -->
+  <script>
+    // Developer popup open/close
+    document.querySelector('.developer-link').addEventListener('click', () => {
+      document.querySelector('.footer-dev-modal').classList.add('active');
+    });
+
+    document.querySelector('.close-btn').addEventListener('click', () => {
+      document.querySelector('.footer-dev-modal').classList.remove('active');
+    });
+
+    // Back to Top Button
+    const backBtn = document.getElementById('backToTop');
+    window.onscroll = () => {
+      backBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    };
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+  <script>
+    document.querySelector('.developer-link').addEventListener('click', () => {
+      document.querySelector('.footer-dev-modal').classList.add('active');
+    });
+
+    document.querySelector('.close-btn').addEventListener('click', () => {
+      document.querySelector('.footer-dev-modal').classList.remove('active');
+    });
+
+    // Back to Top
+    const backBtn = document.getElementById('backToTop');
+    window.onscroll = () => {
+      if (window.scrollY > 300) backBtn.style.display = 'block';
+      else backBtn.style.display = 'none';
+    };
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+  <script>
+    // Open Developer Modal
+    document.getElementById('developerLink').addEventListener('click', function () {
+      document.getElementById('devModal').style.display = 'flex';
+    });
+
+    // Close Developer Modal
+    document.querySelector('#devModal .close-btn').addEventListener('click', function () {
+      document.getElementById('devModal').style.display = 'none';
+    });
+
+    // Optional: Close on outside click
+    window.addEventListener('click', function (e) {
+      if (e.target.id === 'devModal') {
+        document.getElementById('devModal').style.display = 'none';
+      }
+    });
+  </script>
+  <script>
+    // Show Popup
+    document.getElementById('developerLink').addEventListener('click', function () {
+      document.getElementById('devModal').style.display = 'flex';
+    });
+
+    // Close Popup
+    document.getElementById('devCloseBtn').addEventListener('click', function () {
+      document.getElementById('devModal').style.display = 'none';
+    });
+
+    // Close when clicking outside popup
+    window.addEventListener('click', function (e) {
+      if (e.target.id === 'devModal') {
+        document.getElementById('devModal').style.display = 'none';
+      }
+    });
+  </script>
+
+
+
 </body>
 
 </html>
